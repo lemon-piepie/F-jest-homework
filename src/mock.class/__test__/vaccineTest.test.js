@@ -7,10 +7,10 @@ const mockGetHasAntibodies = jest.fn();
 
 jest.mock("../recipient", () => {
   // mock class实现
-  return jest.fn().mockImplementation( () => {
+  return jest.fn().mockImplementation(() => {
     return {
-      acceptInjection : mockAcceptInjection,
-      getHasAntibodies : mockGetHasAntibodies
+      acceptInjection: mockAcceptInjection,
+      getHasAntibodies: mockGetHasAntibodies,
     };
   });
 });
@@ -27,7 +27,9 @@ describe("inject", () => {
     // TODO 14: add test here
     const vaccineTest = new VaccineTest();
     vaccineTest.inject();
-    expect(mockAcceptInjection).toHaveBeenCalledWith(expect.any(Covid19Vaccine));
+    expect(mockAcceptInjection).toHaveBeenCalledWith(
+      expect.any(Covid19Vaccine)
+    );
   });
 });
 

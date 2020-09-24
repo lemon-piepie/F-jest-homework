@@ -7,10 +7,10 @@ test("TODO 11", () => {
   forEach([1, 2], mockCallback);
 
   // TODO 11: add assertion
-  expect(mockCallback).toHaveBeenCalled()
-  expect(mockCallback).toHaveBeenCalledTimes(2)
-  expect(mockCallback).toHaveBeenCalledWith(1)
-  expect(mockCallback).toHaveBeenCalledWith(2)
+  expect(mockCallback).toHaveBeenCalled();
+  expect(mockCallback).toHaveBeenCalledTimes(2);
+  expect(mockCallback).toHaveBeenCalledWith(1);
+  expect(mockCallback).toHaveBeenCalledWith(2);
 });
 
 test("TODO 12", () => {

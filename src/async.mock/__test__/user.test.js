@@ -18,6 +18,8 @@ describe("register", () => {
     const fakeName = "nonExistName";
     const fakepwd = "mockPassword";
     verifyUsername.mockReturnValueOnce(false);
-    await expect(register(fakeName, fakepwd)).rejects.toThrow("wrong username or password");
+    await expect(register(fakeName, fakepwd)).rejects.toThrow(
+      "wrong username or password"
+    );
   });
 });
